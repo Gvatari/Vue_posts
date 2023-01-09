@@ -1,30 +1,73 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+    <div class="app">
+        <form>
+            <h4>Создание поста</h4>
+            <input class="input" type="text" placeholder="Название">
+            <input class="input" type="text" placeholder="Описание">
+            <button class="btn">Создать</button>
+        </form>
+        <div class="post" v-for:="post in posts">
+            <div><strong>Название: </strong>{{ post.title }}</div>
+            <div><strong>Описание: </strong>{{ post.body }}</div>
+        </div>
+    </div>
 </template>
 
+<script>
+export default {
+    data() {
+        return {
+            posts: [
+                { id: 1, title: 'JS', body: 'Описание поста' },
+                { id: 2, title: 'JS 2', body: 'Описание поста 2' },
+                { id: 3, title: 'JS 3', body: 'Описание поста 3' },
+                { id: 4, title: 'JS 4', body: 'Описание поста 4' },
+            ]
+        }
+    },
+    methods: {
+
+    },
+}
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-nav {
-  padding: 30px;
+.app {
+    padding: 20px;
 }
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
+.post {
+    margin: 15px 0 0 0;
+    padding: 15px;
+    border: 2px solid teal;
 }
 
-nav a.router-link-exact-active {
-  color: #42b983;
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input {
+    width: 100%;
+    border: 1px solid teal;
+    padding: 10px 15px;
+    margin-top: 15px;
+}
+
+.btn {
+    margin-top: 15px;
+    align-self: flex-end;
+    padding: 10px 15px;
+    background: none;
+    color: teal;
+    border: 1px solid teal;
 }
 </style>
+
+<!-- SINGLE FILE COMPONENT -->
