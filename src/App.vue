@@ -18,7 +18,7 @@ export default {
     data() {
         return {
             posts: [
-                { id: 1, title: 'JS', body: 'Описание поста' },
+                { id: 1, title: 'JS', body: 'Описание поста 1' },
                 { id: 2, title: 'JS 2', body: 'Описание поста 2' },
                 { id: 3, title: 'JS 3', body: 'Описание поста 3' },
                 { id: 4, title: 'JS 4', body: 'Описание поста 4' },
