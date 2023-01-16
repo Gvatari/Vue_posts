@@ -1,7 +1,7 @@
 <template>
     <div class="app">
         <post-form
-        @create="createPost"
+            @create="createPost"
         />
         <post-list 
             :posts="posts"

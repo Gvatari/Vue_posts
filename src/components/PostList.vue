@@ -22,9 +22,5 @@ export default {
 </script>
 
 <style scoped>
-.post {
-    margin: 15px 0 0 0;
-    padding: 15px;
-    border: 2px solid teal;
-}
+
 </style>
