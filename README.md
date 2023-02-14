@@ -1,4 +1,4 @@
-# vue_project
+# Publication of posts
 
 ## Project setup
 ```
